@@ -2,7 +2,7 @@
 # Dockerfile — Observable Agent (multi-stage, non-root)
 # ============================================================
 
-# Stage 1: Builder
+# Stage 1: Builder (dùng official mirror trên AWS ECR Public để tránh lỗi 429 rate limit của Docker Hub)
 FROM public.ecr.aws/docker/library/python:3.11-slim AS builder
 
 WORKDIR /build
